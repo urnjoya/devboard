@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     <p class="repo_desc">${repo.description}</p>
                     <span class="repo_stack"><strong>Tech Stack:</strong> ${repo.tech_stack.join(", ")}</span>
                     <div class="mt-4">
-                        <a href="${repo.repo_link}" target="_blank" class="repo_git"><i class="repo_icon_1"></i>GitHub Repo</a>
-                        <a href="${repo.live_link}" target="_blank" class="repo_live"><i class="repo_icon_2"></>Live Demo</a>
+                        <a href="${repo.repo_link}" target="_blank" class="repo_git"><i class="repo_icon_1"></i>  GitHub Repo</a>
+                        <a href="${repo.live_link}" target="_blank" class="repo_live"><i class="repo_icon_2"></>  Live Demo</a>
                     </div>    
                 `;
                 // debugging line
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // let icns = document.querySelectorAll(".icn");
                 a1.classList.add("bg-blue-500", "text-white", "px-4", "py-2", "rounded-lg", "shadow", "hover:bg-blue-600", "transition", "duration-300", "inline-block", "mr-2");
                 i1.classList.add("fab", "fa-github");
-                a2.classList.add("bg-green-500", "text-white", "px-4", "py-2", "rounded-lg", "shadow", "hover:bg-green-600", "transition", "duration-300", "inline-block");
+                a2.classList.add("bg-green-500", "text-white", "px-4", "py-3", "rounded-lg", "shadow", "hover:bg-green-600", "transition", "duration-300", "inline-block");
                 i2.classList.add("fas", "fa-external-link-alt");
             });
         })
