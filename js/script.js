@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             data.forEach(repo => {
                 const card = document.createElement("div");
-                card.classList.add("repo-card, bg-white, rounded-lg, shadow-lg p-6");
+                card.classList.add("repo-card, bg-white, rounded-lg, shadow-lg, p-6");
 
                 card.innerHTML = `
                     <h2>${repo.name}</h2>
