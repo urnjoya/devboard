@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     fetch("https://urnjoya.github.io/devboard/json/repo_list.json")  // JSON file fetch kar rahe hain
         .then(response => response.json())
-        .then(data => {
+        .then(data => { 
             const container = document.getElementById("repo-container");
             console.log(container, "container data");  // Debugging line to check if container is selected
 
