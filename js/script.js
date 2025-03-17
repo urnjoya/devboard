@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 card.innerHTML = `
                     <h2>${repo.name}</h2>
                     <p>${repo.description}</p>
-                    <p><strong>Tech Stack:</strong> ${repo.techStack.join(", ")}</p>
-                    <a href="${repo.repoLink}" target="_blank">GitHub Repo</a> |
-                    <a href="${repo.liveLink}" target="_blank">Live Demo</a>
+                    <p><strong>Tech Stack:</strong> ${repo.tech_stack.join(", ")}</p>
+                    <a href="${repo.repo_link}" target="_blank">GitHub Repo</a> |
+                    <a href="${repo.live_link}" target="_blank">Live Demo</a>
                 `;
 
                 container.appendChild(card);
