@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="profile-picture">
                   <img alt="${repo.alt || 'Profile Picture'}" src="${repo.profile_url}" height="100" width="100"/>
                 </div>
-                <div class="profil-name">
+                <div class="profile-name">
                   ${repo.name}
                 </div>
                 <div class="profile-username">
