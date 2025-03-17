@@ -40,19 +40,25 @@ header{
         }
 
         .profile-name {
+            text-align: center;
+            font-weight: bold;
             font-size: 24px;
             font-weight: bold;
             color: #333;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         .profile-username {
+            text-align: center;
+            font-weight: bold;
             font-size: 16px;
             color: #777;
-            margin-top: 5px;
+            margin-top: 6px;
         }
 
         .profile-description {
+            test-align: justify;
+            max-width: 80%;
             font-size: 14px;
             color: #555;
             margin-top: 10px;
