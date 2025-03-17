@@ -3,7 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(data => {
             const container = document.getElementById("repo-container");
+           console.log(container);  // Debugging line to check if container is selected
 
+            if (!container) {
+                console.error("Container element not found");
             data.forEach(repo => {
                 const card = document.createElement("div");
                 card.classList.add("repo-card");
@@ -15,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <a href="${repo.repo_link}" target="_blank">GitHub Repo</a> |
                     <a href="${repo.live_link}" target="_blank">Live Demo</a>
                 `;
-
+    console.log(container,"|||",card);
                 container.appendChild(card);
             });
         })
