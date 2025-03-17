@@ -1,0 +1,98 @@
+/* 🌟 Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* 🌟 Card Styling */
+.card {
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    margin: 20px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 🌟 Hover Effect */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* 🌟 Heading */
+.card h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* 🌟 Paragraph */
+.card p {
+    color: #555;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* 🌟 Button Container */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* 🌟 Buttons */
+.button {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s ease;
+    display: inline-block;
+}
+
+/* 🌟 GitHub Repo Button */
+.github-btn {
+    background-color: #24292e;
+}
+
+.github-btn:hover {
+    background-color: black;
+}
+
+/* 🌟 Live Demo Button */
+.live-btn {
+    background-color: #28a745;
+}
+
+.live-btn:hover {
+    background-color: #218838;
+}
+
+/* 🌟 Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        max-width: 90%;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+}
