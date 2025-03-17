@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             data.forEach(repo => {
                 const card = document.createElement("div");
-                card.classList.add("repo-card, bg-white, rounded-lg, shadow-lg, p-6");
+                card.classList.add("repo-card", "bg-white", "rounded-lg", "shadow-lg", "p-6");
 
                 card.innerHTML = `
                     <h2>${repo.name}</h2>
@@ -28,17 +28,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 // debugging line
                 console.log("Adding card to container: ",repo.name);
                 container.appendChild(card);
-                h2.classList.add("text-2xl, font-bold, text-blue-600, mb-2");
-                p.classList.add("text-gray-700, mb-4");
-                span.classList.add("inline-block, bg-blue-100, text-blue-800, text-xs, px-2, py-1, rounded-full, uppercase, font-semibold, tracking-wide");
+                h2.classList.add("text-2xl", "font-bold", "text-blue-600", "mb-2");
+                p.classList.add("text-gray-700", "mb-4");
+                span.classList.add("inline-block", "bg-blue-100", "text-blue-800", "text-xs", "px-2", "py-1", "rounded-full", "uppercase", "font-semibold", "tracking-wide");
                 a.classList.add("btn");
                 i.classList.add("icn");
                 let btns = document.querySelectorAll(".btn");
                 let icns = document.querySelectorAll(".icn");
-                btns[0].classList.add("bg-blue-500, text-white, px-4, py-2, rounded-lg, shadow, hover:bg-blue-600, transition, duration-300, inline-block, mr-2");
-                icns[0].classList.add("fab, fa-github");
-                btns[1].classList.add("bg-green-500, text-white, px-4, py-2, rounded-lg, shadow, hover:bg-green-600, transition, duration-300, inline-block");
-                icns[1].classList.add("fas, fa-external-link-alt");
+                btns[0].classList.add("bg-blue-500", "text-white", "px-4", "py-2", "rounded-lg", "shadow", "hover:bg-blue-600", "transition", "duration-300", "inline-block", "mr-2");
+                icns[0].classList.add("fab", "fa-github");
+                btns[1].classList.add("bg-green-500", "text-white", "px-4", "py-2", "rounded-lg", "shadow", "hover:bg-green-600", "transition", "duration-300", "inline-block");
+                icns[1].classList.add("fas", "fa-external-link-alt");
             });
         })
         .catch(error => console.error("Error fetching repo data:", error));
