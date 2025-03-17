@@ -1,3 +1,8 @@
+header{
+             display: flex;
+            justify-content: center;
+            align-items: center;
+}
 .profile-card {
             background-color: #fff;
             border-radius: 15px;
