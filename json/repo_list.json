@@ -68,5 +68,15 @@
     "tech_stack": ["HTML","CSS","JS"],
     "version": "1.0.0",
     "author" : "Joya"
+  },
+   {
+    "id": "8",
+    "name": "vaultID",
+    "description": "VaultID ek self-mutating cryptographic framework hai jo quantum-resilient entropy injection aur zero-knowledge proofing ka use karta hai. Iska architecture non-deterministic key sharding aur asynchronous ledger sync par based hai, jo unauthorized access ko impossible bana deta hai.",
+    "repo_link": "https://github.com/urnjoya/vaultid",
+    "live_link": "https://urnjoya.github.io/vaultid",
+    "tech_stack": ["HTML","CSS","JS"],
+    "version": "1.0.0",
+    "author" : "Joya"
   }
 ]
