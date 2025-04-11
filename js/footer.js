@@ -22,6 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 <button onclick="shareData()">
                 <img src="https://img.icons8.com/?size=20&id=YxakpbprUt1s&format=png&color=000000"> Share devboard</button>
             </section>
+            <section class="g-form">
+                <a href="https://forms.gle/uFMDxspf9UiyMgT26">Feedback</a>
+            </section>
             <section class="email-connect">
                 Connect via Email: <a href="mailto:${foot.email}">${foot.email}</a>
             </section>
