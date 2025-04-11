@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#footer {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    user-select: none;
+}
+
+#footer .version-info,
+#footer .email-connect {
+    margin: 10px 0;
+}
+
+#footer .email-connect a {
+    color: #ffeb3b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#footer .email-connect a:hover {
+    color: #fff176;
+}
+
+@media (min-width: 600px) {
+    #footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    #footer .version-info,
+    #footer .email-connect {
+        margin: 0;
+    }
+}
+
+.share-data {
+    display: inline;
+}
+
+.share-data img {
+    margin: 0;
+}
+
+.share-data img,
+button {
+    display: inline;
+}
+
+.share-data:hover {
+    color: black;
+    font-weight: bold;
+}
