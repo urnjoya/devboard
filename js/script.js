@@ -100,6 +100,8 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error("Error fetching repo data:", error));
 });
 // notification.js
+const live = document.getElementById("live");
+console.log(live);
 function requestNotificationPermission() {
     if ("Notification" in window) {
         Notification.requestPermission().then(permission => {
@@ -128,8 +130,7 @@ function showCustomNotification(title, bodyText, iconUrl) {
 }
 // Call this somewhere like a button press or app load
 requestNotificationPermission();
-const live = document.getElementById("live");
-console.log(live);
+
 live.addEventListener("click", function () {
     showCustomNotification("Devboard", "got live on DevBoard Application","json/devboard_small.png");
     console.log("OK Notification",live);
