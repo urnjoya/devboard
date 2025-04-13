@@ -1,7 +1,7 @@
 {
   "name": "DevBoard",
   "short_name": "DevBoard",
-  "start_url": "devboard/index.html",
+  "start_url": "/devboard/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#1a1a1a",
