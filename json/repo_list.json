@@ -40,16 +40,6 @@
     "author" : "Joya"
   },
     {
-    "id": "5",
-    "name": "pwacloud",
-    "description": "🚀 PWACloud ek modern, fast, aur secure PWA (Progressive Web Apps) store hai, jisme lightweight, offline-capable, aur instant-install hone wale web apps ka collection milega. Yahaan users bina kisi app store dependency ke directly apne browser se apps install kar sakte hain.",
-    "repo_link": "https://github.com/urnjoya/pwacloud",
-    "live_link": "https://urnjoya.github.io/pwacloud",
-    "tech_stack": ["HTML","CSS","JS"],
-    "version": "1.0.0",
-    "author" : "Joya"
-  },
-    {
     "id": "6",
     "name": "tester",
     "description": "Yeh ek PWA ka testing phase hai.",
