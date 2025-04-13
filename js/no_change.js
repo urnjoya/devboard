@@ -91,25 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
             `;
 
             console.log("Profile data added:", foot.name);
-        })
-        .catch(error => console.error("Error fetching repo data:", error));
-});
-
-function shareData() {
-    if (navigator.share) {
-        navigator.share({
-            title: 'devboard',
-            text: 'Check out this awesome dev portfolio! called devboard',
-            url: window.location.href
-        })
-            .then(() => console.log('Shared successfully!'))
-            .catch((error) => console.log('Error sharing:', error));
-    } else {
-        alert('Share not supported on this browser.');
-    }
-}
-
-// notification.js
+            // notification.js
 const share = document.getElementById("share");
 console.log(share);
 function requestNotificationPermission() {
@@ -145,7 +127,23 @@ share.addEventListener("click", function () {
     showCustomNotification("Devboard", "got live on DevBoard Application","json/devboard_small.png");
     console.log("OK Notification",share);
 });
+        })
+        .catch(error => console.error("Error fetching repo data:", error));
+});
 
+function shareData() {
+    if (navigator.share) {
+        navigator.share({
+            title: 'devboard',
+            text: 'Check out this awesome dev portfolio! called devboard',
+            url: window.location.href
+        })
+            .then(() => console.log('Shared successfully!'))
+            .catch((error) => console.log('Error sharing:', error));
+    } else {
+        alert('Share not supported on this browser.');
+    }
+}
 // SECRET
 // const frc = document.getElementById("colorButton");
 // frc.style.display = "none";
