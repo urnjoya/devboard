@@ -8,12 +8,12 @@
   "description": "A joya collection with ...",
   "icons": [
     {
-      "src": "/json/devboard_small.png",
+      "src": "json/devboard_small.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/json/devboard_large.png",
+      "src": "json/devboard_large.png",
       "type": "image/png",
       "sizes": "512x512"
     }
