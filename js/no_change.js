@@ -90,7 +90,6 @@ document.addEventListener("DOMContentLoaded", function () {
             </section>
             `;
 
-            console.log("Profile data added:", foot.name);
             // notification.js
 const share = document.getElementById("share");
 console.log(share);
@@ -116,6 +115,7 @@ function showCustomNotification(title, bodyText, iconUrl) {
             vibrate: [200, 100, 200], // optional
             tag: "custom-tag", // replace old notification if tag is same
         });
+            console.log("RUN");
     } else {
         requestNotificationPermission();
     }
