@@ -99,9 +99,3 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error fetching repo data:", error));
 });
-
-
-live.addEventListener("click", function () {
-    showCustomNotification("Devboard", "got live on DevBoard Application","json/devboard_small.png");
-    console.log("OK Notification",live);
-});
