@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 Version ${foot.version}
             </section>
             <section class="share-data">
-                <button onclick="shareData()">
+                <button onclick="shareData()" id="share">
                 <img src="https://img.icons8.com/?size=20&id=YxakpbprUt1s&format=png&color=000000"> Share devboard</button>
             </section>
             <section class="g-form">
@@ -108,6 +108,44 @@ function shareData() {
         alert('Share not supported on this browser.');
     }
 }
+
+// notification.js
+const share = document.getElementById("share");
+console.log(share);
+function requestNotificationPermission() {
+    if ("Notification" in window) {
+        Notification.requestPermission().then(permission => {
+            if (permission === "granted") {
+                console.log("Notification permission granted.");
+            } else {
+                console.warn("Notification permission denied.");
+            }
+        });
+    } else {
+        console.error("Browser does not support notifications.");
+    }
+}
+// 
+function showCustomNotification(title, bodyText, iconUrl) {
+    if (Notification.permission === "granted") {
+        new Notification(title, {
+            body: bodyText,
+            icon: iconUrl || "json/devboard_small.png", // fallback icon
+            vibrate: [200, 100, 200], // optional
+            tag: "custom-tag", // replace old notification if tag is same
+        });
+    } else {
+        requestNotificationPermission();
+    }
+}
+// Call this somewhere like a button press or app load
+requestNotificationPermission();
+
+share.addEventListener("click", function () {
+    showCustomNotification("Devboard", "got live on DevBoard Application","json/devboard_small.png");
+    console.log("OK Notification",share);
+});
+
 // SECRET
 // const frc = document.getElementById("colorButton");
 // frc.style.display = "none";
