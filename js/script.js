@@ -68,8 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     <p class="repo_desc">${repo.description}</p>
                     <span class="repo_stack"><strong>Tech Stack:</strong> ${repo.tech_stack.join(", ")}</span>
                     <div class="mt-4">
-                        <a href="${repo.repo_link}" target="_blank" class="repo_git" id="link"><i class="repo_icon_1"></i>  GitHub Repo</a>
-                        <a href="${repo.live_link}" target="_blank" class="repo_live" id="live"><i class="repo_icon_2"></>  Live Demo</a>
+                        <a href="${repo.repo_link}" target="_blank" class="repo_git" ><i class="repo_icon_1"></i>  GitHub Repo</a>
+                        <a href="${repo.live_link}" target="_blank" class="repo_live" ><i class="repo_icon_2"></>  Live Demo</a>
                     </div>    
                 `;
                 // debugging line
@@ -99,37 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error fetching repo data:", error));
 });
-// notification.js
-const live = document.getElementById("live");
-console.log(live);
-function requestNotificationPermission() {
-    if ("Notification" in window) {
-        Notification.requestPermission().then(permission => {
-            if (permission === "granted") {
-                console.log("Notification permission granted.");
-            } else {
-                console.warn("Notification permission denied.");
-            }
-        });
-    } else {
-        console.error("Browser does not support notifications.");
-    }
-}
-// 
-function showCustomNotification(title, bodyText, iconUrl) {
-    if (Notification.permission === "granted") {
-        new Notification(title, {
-            body: bodyText,
-            icon: iconUrl || "json/devboard_small.png", // fallback icon
-            vibrate: [200, 100, 200], // optional
-            tag: "custom-tag", // replace old notification if tag is same
-        });
-    } else {
-        requestNotificationPermission();
-    }
-}
-// Call this somewhere like a button press or app load
-requestNotificationPermission();
+
 
 live.addEventListener("click", function () {
     showCustomNotification("Devboard", "got live on DevBoard Application","json/devboard_small.png");
