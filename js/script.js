@@ -1,8 +1,53 @@
+// PROFILE
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("https://urnjoya.github.io/devboard/json/repo_list.json")  // JSON file fetch kar rahe hain
-        .then(response =>{
-            if(!response.ok){
-                throw new Error("Network response was not ok:"+response.status);
+    fetch("json/profile.json")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok: " + response.status);
+            }
+            return response.json();
+        })
+        .then(repo => {
+            const container = document.getElementById("profile-card");
+
+            if (!container) {
+                console.info("Container element not found");
+                return;
+            }
+
+            container.innerHTML = `
+                <div class="profile-picture">
+                    <img alt="${repo.alt || 'Profile Picture'}" src="${repo.profile_url}" height="100" width="100"/>
+                </div>
+                <div class="profile-name">${repo.name}</div>
+                <div class="profile-username">
+                    <a href="${repo.git_url}">@${repo.username}</a>
+                </div>
+                <div class="profile-description" id="typewriterTarget">
+                    ${repo.description}
+                </div>
+            `;
+
+            // Typewriter effect
+            const typewriter = new Typewriter("#typewriterTarget", {
+                loop: true,
+                delay: 75,
+                cursor: "&#x1F589",
+            });
+
+            typewriter
+                .deleteAll()
+                .typeString(repo.description)
+                .start();
+        })
+        .catch(error => console.error("Error fetching repo data:", error));
+});
+// REPO CARD
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("json/repo_list.json")  // JSON file fetch kar rahe hain
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok:" + response.status);
             }
             return response.json();
         })
@@ -28,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>    
                 `;
                 // debugging line
-                console.log("Adding card to container: ",repo.name);
+                console.log("Adding card to container: ", repo.name);
                 container.appendChild(card);
                 // ✅ Elements ko select karo (ab ye properly work karega)
                 const h2 = card.querySelector(".repo_title");
@@ -38,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const i1 = card.querySelector(".repo_icon_1");
                 const a2 = card.querySelector(".repo_live");
                 const i2 = card.querySelector(".repo_icon_2");
-                
+
                 h2.classList.add("text-2xl", "font-bold", "text-blue-600", "mb-2");
                 p.classList.add("text-gray-700", "mb-4");
                 span.classList.add("inline-block", "bg-blue-100", "text-blue-800", "text-xs", "px-2", "py-1", "rounded-full", "uppercase", "font-semibold", "tracking-wide");
