@@ -129,6 +129,7 @@ function showCustomNotification(title, bodyText, iconUrl) {
 // Call this somewhere like a button press or app load
 requestNotificationPermission();
 const live = document.getElementById("live");
+console.log(live);
 live.addEventListener("click", function () {
     showCustomNotification("Devboard", "got live on DevBoard Application","json/devboard_small.png");
     console.log("OK Notification",live);
