@@ -3,7 +3,7 @@ self.addEventListener("install", (e) => {
     caches.open("devboard-cache").then((cache) =>
       cache.addAll([
         "/",
-        "index.html",
+        "/devboard/index.html",
         "css/style.css",
         "css/nav_style.css",
         "css/footer_style.css",
