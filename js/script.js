@@ -128,8 +128,8 @@ function showCustomNotification(title, bodyText, iconUrl) {
 }
 // Call this somewhere like a button press or app load
 requestNotificationPermission();
-
-document.getElementById("live").addEventListener("click", function () {
+const live = document.getElementById("live");
+live.addEventListener("click", function () {
     showCustomNotification("Devboard", "got live on DevBoard Application","json/devboard_small.png");
-    console.log("OK Notification");
+    console.log("OK Notification",live);
 });
