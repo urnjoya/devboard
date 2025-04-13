@@ -118,7 +118,7 @@ function showCustomNotification(title, bodyText, iconUrl) {
     if (Notification.permission === "granted") {
         new Notification(title, {
             body: bodyText,
-            // icon: iconUrl || "icons/icon-192.png", // fallback icon
+            icon: iconUrl || "json/devboard_small.png", // fallback icon
             vibrate: [200, 100, 200], // optional
             tag: "custom-tag", // replace old notification if tag is same
         });
@@ -130,5 +130,6 @@ function showCustomNotification(title, bodyText, iconUrl) {
 requestNotificationPermission();
 
 document.getElementById("live").addEventListener("click", function () {
-    showCustomNotification("Devboard", "got live on DevBoard Application");
+    showCustomNotification("Devboard", "got live on DevBoard Application","json/devboard_small.png");
+    console.log("OK Notification");
 });
