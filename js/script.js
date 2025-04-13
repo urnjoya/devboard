@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const typewriter = new Typewriter("#typewriterTarget", {
                 loop: true,
                 delay: 75,
-                cursor: "&#x1F589",
+                cursor: "|",
             });
 
             typewriter
